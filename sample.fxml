@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<GridPane alignment="center" hgap="10" prefHeight="300.0" prefWidth="500.0" style="-fx-background-color: #F5F7FB; -fx-border-radius: 20px;" vgap="10" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <Pane prefHeight="300.0" prefWidth="500.0" style="-fx-background-color: #F5F7FB; -fx-border-radius: 10 10 10 10;">
+         <children>
+            <Pane prefHeight="51.0" prefWidth="160.0" style="-fx-background-color: #04CC8F; -fx-right-bottom-border-radius: 20px;">
+               <children>
+                  <Text fill="WHITE" layoutX="26.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="File Copier">
+                     <font>
+                        <Font name="Nunito Black" size="21.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <Button fx:id="selectSrcDirBtn" layoutX="366.0" layoutY="122.0" mnemonicParsing="false" onAction="#getSrcDirectory" prefHeight="16.0" prefWidth="107.0" style="-fx-background-color: #9094FD;" text="Source Folder" textFill="WHITE">
+               <font>
+                  <Font name="Nunito Black" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="selectDestDirBtn" layoutX="366.0" layoutY="167.0" mnemonicParsing="false" onAction="#getDestDirectory" prefHeight="30.0" prefWidth="107.0" style="-fx-background-color: #9094FD;" text="Destination Folder" textFill="WHITE">
+               <font>
+                  <Font name="Nunito Black" size="10.0" />
+               </font>
+            </Button>
+            <Button fx:id="selectFileBtn" layoutX="366.0" layoutY="73.0" mnemonicParsing="false" onAction="#getFileList" prefHeight="17.0" prefWidth="107.0" style="-fx-background-color: #9094FD;" text="File List" textFill="WHITE">
+               <font>
+                  <Font name="Nunito Black" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="performCopyBtn" layoutX="170.0" layoutY="241.0" mnemonicParsing="false" onAction="#performCopy" prefHeight="39.0" prefWidth="160.0" style="-fx-background-color: #04CC8F;" text="Copy" textFill="WHITE">
+               <font>
+                  <Font name="Nunito Black" size="18.0" />
+               </font>
+            </Button>
+            <TextField fx:id="fileListBox" layoutX="18.0" layoutY="75.0" prefHeight="27.0" prefWidth="340.0" />
+            <TextField fx:id="srcDirBox" layoutX="18.0" layoutY="123.0" prefHeight="27.0" prefWidth="340.0" />
+            <TextField fx:id="descDirBox" layoutX="18.0" layoutY="168.0" prefHeight="27.0" prefWidth="340.0" />
+         </children>
+      </Pane>
+   </children>
+</GridPane>
