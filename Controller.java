@@ -3,6 +3,8 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
+import javafx.scene.control.ProgressBar;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.DirectoryChooser;
 import javafx.stage.FileChooser;
@@ -31,6 +33,9 @@ public class Controller {
 
     @FXML
     private TextField descDirBox;
+
+    @FXML
+    private TextArea progressTextArea;
 
     public static void main(String[] args) {
 
@@ -90,16 +95,28 @@ public class Controller {
     }
 
     public void performCopy() {
+
         if(!fileList.isEmpty()) {
             for (String file: fileList) {
                 try {
                     File srcFile = new File(srcDir + File.separator + file);
                     File destFile = new File(destDir+ File.separator + file);
                     Files.copy(srcFile.toPath(), destFile.toPath());
+                    copiedFileList.add(file);
                 } catch (Exception e) {
                     System.out.println(e.getMessage());
                 }
             }
+
+            for(String filesToCopy: fileList) {
+                if(!copiedFileList.contains(filesToCopy)) {
+                    progressTextArea.appendText(filesToCopy + " not found/copied!\n");
+                } else {
+                    progressTextArea.appendText(filesToCopy + " copied!\n");
+                }
+            }
+
+
         }
     }
 

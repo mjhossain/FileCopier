@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
@@ -9,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<GridPane alignment="center" hgap="10" prefHeight="300.0" prefWidth="500.0" style="-fx-background-color: #F5F7FB; -fx-border-radius: 20px;" vgap="10" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<GridPane alignment="center" hgap="10" prefHeight="500.0" prefWidth="500.0" style="-fx-background-color: #F5F7FB; -fx-border-radius: 20px;" vgap="10" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <columnConstraints>
       <ColumnConstraints />
    </columnConstraints>
@@ -17,7 +18,7 @@
       <RowConstraints />
    </rowConstraints>
    <children>
-      <Pane prefHeight="300.0" prefWidth="500.0" style="-fx-background-color: #F5F7FB; -fx-border-radius: 10 10 10 10;">
+      <Pane prefHeight="500.0" prefWidth="500.0" style="-fx-background-color: #F5F7FB; -fx-border-radius: 10 10 10 10;">
          <children>
             <Pane prefHeight="51.0" prefWidth="160.0" style="-fx-background-color: #04CC8F; -fx-right-bottom-border-radius: 20px;">
                <children>
@@ -43,7 +44,7 @@
                   <Font name="Nunito Black" size="13.0" />
                </font>
             </Button>
-            <Button fx:id="performCopyBtn" layoutX="170.0" layoutY="241.0" mnemonicParsing="false" onAction="#performCopy" prefHeight="39.0" prefWidth="160.0" style="-fx-background-color: #04CC8F;" text="Copy" textFill="WHITE">
+            <Button fx:id="performCopyBtn" layoutX="170.0" layoutY="231.0" mnemonicParsing="false" onAction="#performCopy" prefHeight="39.0" prefWidth="160.0" style="-fx-background-color: #04CC8F;" text="Copy" textFill="WHITE">
                <font>
                   <Font name="Nunito Black" size="18.0" />
                </font>
@@ -51,6 +52,7 @@
             <TextField fx:id="fileListBox" layoutX="18.0" layoutY="75.0" prefHeight="27.0" prefWidth="340.0" />
             <TextField fx:id="srcDirBox" layoutX="18.0" layoutY="123.0" prefHeight="27.0" prefWidth="340.0" />
             <TextField fx:id="descDirBox" layoutX="18.0" layoutY="168.0" prefHeight="27.0" prefWidth="340.0" />
+            <TextArea fx:id="progressTextArea" layoutY="300.0" prefHeight="200.0" prefWidth="500.0" />
          </children>
       </Pane>
    </children>
